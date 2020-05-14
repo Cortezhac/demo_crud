@@ -59,5 +59,31 @@ public class Conexion {
             System.out.println(e.getMessage());
         }
     }
-    
+    /**
+     * Elimina o actualiza los campos de la Base de datos
+     * @param tabla tanla que se utilizara
+     * @param valoresCamposNuevos datos que seran reemplzados o actualizados
+     * @param condicion condicion de busqueda
+     */
+    public void actualizarEliminarRegistros(String tabla,String valoresCamposNuevos, String condicion){
+        //Cargar conexion
+        Conexion conectar = new Conexion();
+        Connection cone = conectar.getConnection();
+        try {
+            Statement statement;
+            String sqlQueryStatement;
+            //Verfificar valorcamponuevo
+            if(valoresCamposNuevos.isEmpty()){
+                sqlQueryStatement = "DELETE FROM "+ tabla + " WHERE " + condicion + ":";
+            }else {
+                sqlQueryStatement = "UPDATE " + tabla + " SET " + valoresCamposNuevos + " WHWERE " + condicion + ";";
+            }
+            statement = cone.createStatement();
+            statement.execute(sqlQueryStatement);// Ejecutar sql
+            statement.close();
+            cone.close();
+        } catch (SQLException e) {
+            System.out.println("Ha ocurrido el siguiente error: " + e.getMessage());
+        }
+    }
 }
