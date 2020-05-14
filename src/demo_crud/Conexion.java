@@ -36,4 +36,28 @@ public class Conexion {
     public Connection getConnection(){
         return conexion;
     }
+    /**
+     * Permite almacenar los campos en la base de datos 
+     * @param tabla Tabla destino en la BD
+     * @param camposTabla Campos de la BD 
+     * @param valoresCampos Valores del campo en el mismo orden que los campos
+     */
+    public void guardarRegistros(String tabla, String camposTabla, String valoresCampos){
+        //Cargar la conexion
+        Conexion conectar = new Conexion();
+        Connection cone = conectar.getConnection();
+        try {
+            //Definir sentencia SQL
+            String sqlQueryStatement = "INSERT INTO * "+ tabla + "(" + camposTabla + ") VALUES (" + valoresCampos + ")"; 
+            //Establece la conexion entre la aplicacion y la BD
+            Statement statement;
+            statement = cone.createStatement();
+            statement.executeUpdate(sqlQueryStatement);//Ejecutar comando SQL
+            statement.close();
+            cone.close();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    
 }
