@@ -86,4 +86,57 @@ public class Conexion {
             System.out.println("Ha ocurrido el siguiente error: " + e.getMessage());
         }
     }
+    /**
+     * 
+     * @param tablasBusqueda
+     * @param camposBusqueda
+     * @param condicionBusqueda 
+     */
+    public void desplegarRegistros(String tablasBusqueda, String camposBusqueda,String condicionBusqueda){
+        //Cargar la conexion
+        Conexion conectar = new Conexion();
+        Connection cone = conectar.getConnection();
+        try {
+            Statement statement;
+            String sqlQueryStatement;
+            if(condicionBusqueda.equals("")){
+                sqlQueryStatement = "SELECT " + camposBusqueda + " FROM " + tablasBusqueda + ";";
+            }else{
+                sqlQueryStatement = "SELECT " + camposBusqueda + " FROM " + tablasBusqueda + " WHERE " + condicionBusqueda;
+            }
+            statement = cone.createStatement();
+            statement.execute(sqlQueryStatement);// Ejecutar Query SQL
+            // Leindicamos que ejecute la consulta de la tabla
+            try {
+                ResultSet miResultSet = statement.executeQuery(sqlQueryStatement);
+                if(miResultSet.next()){
+                    ResultSetMetaData metaData = miResultSet.getMetaData();
+                    int numColumnas = metaData.getColumnCount();// Numero de columnas de la consulta
+                    System.err.println("<< REGISTROS ALMACENADOS >>\n");
+                    for(int i = 1; i < numColumnas; i++){
+                        //Muestra los titulos de las columnas
+                        System.out.printf("%-25s\t", metaData.getColumnName(i));//%-25s\t separacion entre columnas
+                    }
+                    System.out.println();
+                    //Imprimir los datos de miResultSet contenga
+                    do {                        
+                        for(int i = 1; i <= numColumnas; i++){
+                            System.out.printf("%-25s\t", miResultSet.getObject(i));
+                        }
+                        System.out.println();
+                    } while(miResultSet.next());
+                    System.out.println();
+                }else{
+                    System.out.println("No se han encontrado registros");
+                }
+                miResultSet.close();
+            }finally{
+                //Cerra el statment y la conexion
+                statement.close();
+                cone.close();
+            }
+        } catch (SQLException e) {
+            System.out.println("Ha ocurrido un error " +e.getMessage());
+        }
+    }
 }
