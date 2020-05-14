@@ -1,0 +1,30 @@
+[33mcommit 091d6e8cc450fe24df0f61da08792da9f79ea2dd[m[33m ([m[1;36mHEAD -> [m[1;32mPruebas[m[33m, [m[1;31morigin/Pruebas[m[33m)[m
+Merge: 3a9a933 c356452
+Author: Irvin Cortez <irvincotez67@gmail.com>
+Date:   Wed May 13 12:42:22 2020 -0600
+
+    Merge branch 'Pruebas' of https://github.com/Cortezhac/demo_crud into Pruebas
+
+[33mcommit 3a9a933abab08027edd09aa6e63ec8ec247510e8[m
+Author: JosueChorro <josue14149@gmail.com>
+Date:   Wed May 13 11:49:32 2020 -0600
+
+    He agregado la libreria SQL para java
+
+[33mcommit c3564526d9a86b165df3175ebf6ba68cbf0c326a[m
+Author: JosueChorro <josue14149@gmail.com>
+Date:   Wed May 13 11:49:32 2020 -0600
+
+    He agregado la libreria SQL para java
+
+[33mcommit 1742bd4bf307012e6bdae979121f7cb882a616b4[m
+Author: Irvin Cortez <irvincotez67@gmail.com>
+Date:   Wed May 13 11:27:44 2020 -0600
+
+    Clase conexion agregada
+
+[33mcommit fdd95d8389a3bcf37ec22eccb0abe959bfa9fbdd[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/Desarrollo[m[33m, [m[1;32mDesarrollo[m[33m)[m
+Author: Irvin Cortez <48500847+Cortezhac@users.noreply.github.com>
+Date:   Sun May 10 11:11:51 2020 -0600
+
+    Commit inicial
