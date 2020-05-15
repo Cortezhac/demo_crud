@@ -18,7 +18,7 @@ public class Delete {
         
         System.out.println("Ingrese el id del registro");
         String id_videojuego = leer.next();
-        leer.next(); // Limpia buffer
+       
         String tabla = "videojuego";
         String campos = "*";
         String condicio = "id_videojuego = " + id_videojuego;
@@ -26,7 +26,7 @@ public class Delete {
         utileriasConexion.desplegarRegistros(tabla, campos, condicio);
         System.out.println("Presione << Y >> para confirmar");
         String confirmar_borrar = leer.next();
-        leer.next();//limpia buffer
+        
         if("Y".equals(confirmar_borrar.toUpperCase())){
             String valores_campos_nuevos = "";
             
