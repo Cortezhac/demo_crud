@@ -38,7 +38,7 @@ String tablaV = "videojuegos";
     
     utilerias.actualizarEliminarRegistros(tabla, valoresCamposNuevos, condicionBusqueda);
     System.out.println("Modificado Correctamente ");
-    System.out.println("felicidades");
+  
     ModuloPrincipal.desplegarMenu();
 
 }
