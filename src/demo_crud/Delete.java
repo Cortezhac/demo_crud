@@ -19,7 +19,7 @@ public class Delete {
         System.out.println("Ingrese el id del registro");
         String id_videojuego = leer.next();
         leer.next(); // Limpia buffer
-        String tabla = "videojuegos";
+        String tabla = "videojuego";
         String campos = "*";
         String condicio = "id_videojuego = " + id_videojuego;
         

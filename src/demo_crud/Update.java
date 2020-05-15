@@ -34,7 +34,7 @@ String tablaV = "videojuegos";
     
     String tabla = "videojuego";
     String valoresCamposNuevos = "nom_videojuego = " + vid.getNomvideojuego() + "', tipo_videojuego = '"
-            + vid.getTipovideojuego() + "', compania_videojuego = '" +vid.getCompaniavideojuego() + "'";
+            + vid.getTipovideojuego() + "', compania_videojuego = '" + vid.getCompaniavideojuego() + "'";
     
     utilerias.actualizarEliminarRegistros(tabla, valoresCamposNuevos, condicionBusqueda);
     System.out.println("Modificado Correctamente ");

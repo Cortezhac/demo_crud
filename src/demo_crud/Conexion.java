@@ -65,7 +65,7 @@ public class Conexion {
      * @param valoresCamposNuevos datos que seran reemplzados o actualizados
      * @param condicion condicion de busqueda
      */
-    public void actualizarEliminarRegistros(String tabla,String valoresCamposNuevos, String condicion){
+    public void actualizarEliminarRegistros(String tabla ,String valoresCamposNuevos, String condicion){
         //Cargar conexion
         Conexion conectar = new Conexion();
         Connection cone = conectar.getConnection();
@@ -76,7 +76,7 @@ public class Conexion {
             if(valoresCamposNuevos.isEmpty()){
                 sqlQueryStatement = "DELETE FROM "+ tabla + " WHERE " + condicion + ":";
             }else {
-                sqlQueryStatement = "UPDATE " + tabla + " SET " + valoresCamposNuevos + " WHWERE " + condicion + ";";
+                sqlQueryStatement = "UPDATE " + tabla + " SET " + valoresCamposNuevos + " WHERE " + condicion + ";";
             }
             statement = cone.createStatement();
             statement.execute(sqlQueryStatement);// Ejecutar sql
@@ -107,8 +107,7 @@ public class Conexion {
             statement = cone.createStatement();
             statement.execute(sqlQueryStatement);// Ejecutar Query SQL
             // Leindicamos que ejecute la consulta de la tabla
-            try {
-                ResultSet miResultSet = statement.executeQuery(sqlQueryStatement);
+            try (ResultSet miResultSet = statement.executeQuery(sqlQueryStatement)){
                 if(miResultSet.next()){
                     ResultSetMetaData metaData = miResultSet.getMetaData();
                     int numColumnas = metaData.getColumnCount();// Numero de columnas de la consulta
