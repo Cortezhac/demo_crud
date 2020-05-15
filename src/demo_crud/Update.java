@@ -32,7 +32,7 @@ String tablaV = "videojuegos";
     System.out.println("compania: ");
     vid.setCompaniavideojuego(leer.next());
     
-    String tabla = "videojuegos";
+    String tabla = "videojuego";
     String valoresCamposNuevos = "nom_videojuego = " + vid.getNomvideojuego() + "', tipo_videojuego = '"
             + vid.getTipovideojuego() + "', compania_videojuego = '" +vid.getCompaniavideojuego() + "'";
     
