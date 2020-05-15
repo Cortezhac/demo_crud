@@ -11,7 +11,7 @@ package demo_crud;
 
 import java.sql.SQLException;
 public class Read {
-    public void Read() throws SQLException{
+    public Read() throws SQLException{
         System.out.println("-.-.-.  Consulta de registros   .-.-.-");
         mostrarResultado();
     }
