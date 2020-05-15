@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package demo_crud;
-
 /**
  *
  * @author JCH
@@ -24,7 +23,7 @@ public class Read {
             String camposTabla = "*";
             String condicionBusqueda = "";
             utilerias.desplegarRegistros(tabla, camposTabla, condicionBusqueda);
-        }catch(SQLException ex){
+        }catch(Exception ex){
             System.out.println("Ha ocurrido el siguiente error: " + ex.getMessage());
         }finally{
             ModuloPrincipal.desplegarMenu();
