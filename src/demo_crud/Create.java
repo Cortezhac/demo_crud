@@ -21,15 +21,15 @@ public class Create {
         System.out.println("-.-.-.  Creación de registros   .-.-.-");
         System.out.println("Nombre de videojuego");
         video.setNomvideojuego(leer.nextLine());
-        
+
         System.out.println("Tipo de videojuego");
         video.setTipovideojuego(leer.nextLine());
-        
+
         System.out.println("Compañia");
         video.setCompaniavideojuego(leer.nextLine());
-        
+
         String tabla = "videojuego";
-        String camposTabla = "nom_videojuego, tipo_videojuego, compañia_videojuego";
+        String camposTabla = "nom_videojuego, tipo_videojuego, compania_videojuego";
         String valoresCampos = "'" + video.getNomvideojuego() + "','" + video.getTipovideojuego() + "','" + video.getCompaniavideojuego() + "'";
         Conexion utilerias = new Conexion();
         

@@ -48,7 +48,7 @@ public class Conexion {
         Connection cone = conectar.getConnection();
         try {
             //Definir sentencia SQL
-            String sqlQueryStatement = "INSERT INTO * "+ tabla + "(" + camposTabla + ") VALUES (" + valoresCampos + ")"; 
+            String sqlQueryStatement = "INSERT INTO " + tabla + " (" + camposTabla + ") VALUES (" + valoresCampos + ");"; 
             //Establece la conexion entre la aplicacion y la BD
             Statement statement;
             statement = cone.createStatement();
