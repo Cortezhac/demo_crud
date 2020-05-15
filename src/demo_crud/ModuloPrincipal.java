@@ -34,7 +34,7 @@ public class ModuloPrincipal {
 
         switch(opcionMenu){
             case "1":
-                //Create create = new Create();
+                Create create = new Create();
                 break;
             case "2":
                 Read read = new Read(); 
