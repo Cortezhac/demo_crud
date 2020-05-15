@@ -16,7 +16,7 @@ System.out.println("ACTUALIZAR REGISTROS ");
     System.out.println("Ingresar el registro a modificar: ");
     vid.setIdvideojuego(leer.nextInt());
     
-String tablaV = "videojuegos";
+String tablaV = "videojuego";
     String camposTabla = " id_videojuego, nom_videojuego, tipo_videojuego, compania_videojuego";
     String condicionBusqueda = "id_videojuego = " + vid.getIdvideojuego();
    
