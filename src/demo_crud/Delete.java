@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author Irvin Cortez
  */
 public class Delete {
-    public Delete() throws SQLException{
+    public Delete() throws Exception{
         //Instanciamos clase y libreria
         Scanner leer = new Scanner(System.in);
         Conexion utileriasConexion = new Conexion();
