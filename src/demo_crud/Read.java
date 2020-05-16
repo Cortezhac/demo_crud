@@ -9,14 +9,16 @@ package demo_crud;
  * @author JCH
  */
 
+import java.io.IOException;
 import java.sql.SQLException;
+
 public class Read {
-    public Read() throws SQLException{
+    public Read() throws SQLException, IOException{
         System.out.println("-.-.-.  Consulta de registros   .-.-.-");
         mostrarResultado();
     }
     
-    private void mostrarResultado() throws SQLException {
+    private void mostrarResultado() throws SQLException, IOException {
         try {
             Conexion utilerias = new Conexion();
             String tabla = "videojuego";
