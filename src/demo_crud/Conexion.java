@@ -74,7 +74,7 @@ public class Conexion {
             String sqlQueryStatement;
             //Verfificar valorcamponuevo
             if(valoresCamposNuevos.isEmpty()){
-                sqlQueryStatement = "DELETE FROM "+ tabla + " WHERE " + condicion + ":";
+                sqlQueryStatement = "DELETE FROM "+ tabla + " WHERE " + condicion + ";";
             }else {
                 sqlQueryStatement = "UPDATE " + tabla + " SET " + valoresCamposNuevos + " WHERE " + condicion + ";";
             }
