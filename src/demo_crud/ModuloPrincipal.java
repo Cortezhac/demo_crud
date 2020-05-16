@@ -9,11 +9,11 @@ import java.io.IOException;
  */
 
 public class ModuloPrincipal {
-    public static void main(String[] args) throws  SQLException, IOException{
+    public static void main(String[] args) throws  SQLException, IOException, Exception{
         desplegarMenu();
     }
     
-    public static void desplegarMenu() throws SQLException, IOException{
+    public static void desplegarMenu() throws SQLException, IOException, Exception{
         Scanner opcionSeleccionada = new Scanner(System.in);
         String opcionMenu;
         //Menu 
