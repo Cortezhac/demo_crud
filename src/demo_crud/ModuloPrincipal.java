@@ -2,18 +2,18 @@ package demo_crud;
 
 import java.sql.SQLException;
 import java.util.Scanner;
-
+import java.io.IOException;
 /**
  *
  * @author Ernesto
  */
 
 public class ModuloPrincipal {
-    public static void main(String[] args) throws  SQLException{
+    public static void main(String[] args) throws  SQLException, IOException{
         desplegarMenu();
     }
     
-    public static void desplegarMenu() throws SQLException{
+    public static void desplegarMenu() throws SQLException, IOException{
         Scanner opcionSeleccionada = new Scanner(System.in);
         String opcionMenu;
         //Menu 
