@@ -79,7 +79,7 @@ public class Conexion {
                 sqlQueryStatement = "UPDATE " + tabla + " SET " + valoresCamposNuevos + " WHERE " + condicion + ";";
             }
             statement = cone.createStatement();
-            statement.execute(sqlQueryStatement);// Ejecutar sql
+            statement.executeUpdate(sqlQueryStatement);// Ejecutar sql
             statement.close();
             cone.close();
         } catch (SQLException e) {

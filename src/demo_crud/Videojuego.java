@@ -10,11 +10,13 @@ package demo_crud;
  * @author JCH
  */
 public class Videojuego {
+    //Atributos
     private int idvideojuego;
     private String nomvideojuego;
     private String tipovideojuego;
     private String companiavideojuego;
 
+    //Get y Set del id
     public int getIdvideojuego() {
         return idvideojuego;
     }
@@ -23,6 +25,7 @@ public class Videojuego {
         this.idvideojuego = idvideojuego;
     }
 
+    //Get y Set del nombre
     public String getNomvideojuego() {
         return nomvideojuego;
     }
@@ -31,6 +34,7 @@ public class Videojuego {
         this.nomvideojuego = nomvideojuego;
     }
 
+    //Get y Set del tipo
     public String getTipovideojuego() {
         return tipovideojuego;
     }
@@ -39,6 +43,7 @@ public class Videojuego {
         this.tipovideojuego = tipovideojuego;
     }
 
+    //Get y Set del compañia
     public String getCompaniavideojuego() {
         return companiavideojuego;
     }
