@@ -5,6 +5,7 @@
  */
 package demo_crud;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -14,7 +15,7 @@ import java.util.Scanner;
  */
 
 public class Create {
-    Create() throws  SQLException{
+    Create() throws  SQLException, IOException{
         //Instanciamos clase y libreria
         Scanner leer = new Scanner(System.in);
         Videojuego video = new Videojuego();
